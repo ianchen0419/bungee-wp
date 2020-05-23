@@ -1,0 +1,155 @@
+/*見出し*/
+.gutenberg h2 {
+	font-size: 20px;
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
+
+.gutenberg h2:after {
+	content: '';
+	background: #f60;
+	width: 150px;
+	height: 4px;
+	display: block;
+	margin-top: 20px;
+}
+
+.gutenberg h3 {
+	font-size: 20px;
+}
+
+/*テキスト*/
+
+.gutenberg a {
+	color: #f60;
+}
+
+.gutenberg .has-huge-font-size {
+	font-size: 48px;
+}
+
+.gutenberg .has-large-font-size {
+	font-size: 36px;
+}
+
+.gutenberg .has-small-font-size {
+	font-size: 12px;
+}
+
+.gutenberg .has-text-align-center {
+	text-align: center;
+}
+
+.gutenberg .has-text-align-right {
+	text-align: right;
+}
+
+.gutenberg .has-luminous-vivid-orange-color {
+	color: #f60;
+}
+
+/*画像*/
+
+.gutenberg .wp-block-image figcaption {
+	color: #888;
+}
+
+.gutenberg .aligncenter {
+	text-align: center;
+}
+
+.gutenberg .aligncenter figcaption {
+	text-align: center;
+}
+
+
+/*フロート*/
+
+.gutenberg .wrapper-size:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.gutenberg .clear-both {
+	clear: both;
+}
+
+/*カラム*/
+
+.gutenberg .wp-block-columns {
+	display: flex;
+}
+
+.gutenberg .is-vertically-aligned-top {
+	align-self: top;
+}
+
+.gutenberg .is-vertically-aligned-center {
+	align-self: center;
+}
+
+.gutenberg .is-vertically-aligned-bottom {
+	align-self: bottom;
+}
+
+/*表*/
+
+.gutenberg .wp-block-table {
+	margin: 30px 0 30px 0;
+}
+
+.gutenberg .wp-block-table table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+.gutenberg .wp-block-table th,
+.gutenberg .wp-block-table td {
+	padding: 10px;
+}
+
+.gutenberg .wp-block-table figcaption {
+	text-align: center;
+	color: #888;
+	margin-top: 10px;
+}
+
+.gutenberg .wp-block-table.is-style-regular th,
+.gutenberg .wp-block-table.is-style-regular td {
+	border: 1px solid #000;
+}
+
+.gutenberg .wp-block-table.is-style-regular th,
+.gutenberg .wp-block-table.is-style-stripes th {
+	border-bottom: 2px solid #000;
+}
+
+.gutenberg .wp-block-table.is-style-stripes tbody tr:nth-child(odd) td {
+	background: #d1d1d1;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		background: pink;
+	}
+	
+	.gutenberg .wp-block-columns {
+		flex-wrap: wrap;
+	}
+
+	.gutenberg .wp-block-column {
+		flex-basis: 100% !important;
+	}
+
+	.gutenberg table,
+	.gutenberg tr,
+	.gutenberg td {
+		display: block;
+	}
+
+	.gutenberg .sub-title + .wp-block-table table td:nth-child(1) {
+		width: 100%;
+	}
+}

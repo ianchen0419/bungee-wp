@@ -1,0 +1,524 @@
+/*
+Theme Name: Bungee
+Description: Bungee Super Fly
+Author: Work Capital
+Author URI: https://www.work-capital.co.jp/
+Version: 1.0
+Tags: orange, offical page
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+* {
+	font-size: 16px;
+}
+
+html,body {
+	margin: 0;
+	min-width: 1024px;
+}
+
+body {
+	position: relative;
+	background: #f5f5f5;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans', "ヒラギノ角ゴシック", 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3',Roboto, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	color: #222;
+}
+
+a {
+	transition-duration: 0.3s;
+	text-decoration: none;
+}
+
+a:hover {
+	
+	opacity: 0.8;
+}
+
+.wrapper-size {
+	max-width: 1100px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+#header {
+	height: 100px;
+	color: #f60;
+	padding: 0 20px;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+#menu {
+	position: absolute;
+	top: 0;
+	z-index: 1000000;
+	box-sizing: border-box;
+	min-width: 1024px;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.menu-wrapper {
+	background: rgba(255,255,255,.83);
+	position: absolute;
+	right: -100%;
+	padding: 15px 25px;
+	min-width: 250px;
+	top: 0;
+	width: 350px;
+	height: 100%;
+	text-align: center;
+	transition-duration: 0.5s;
+	pointer-events: auto;
+}
+
+body.menu-showed .menu-wrapper {
+	right: 0;
+}
+
+body.menu-showed:after {
+	content: '';
+	background: rgba(0,0,0,.1);
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: 100000;
+	top: 0;
+	pointer-events: none;
+}
+
+body.menu-showed {
+	height: 100vh;
+	overflow: hidden;
+}
+
+#menu a {
+	display: block;
+	font-weight: bold;
+	text-align: center;
+	padding: 30px 0;
+	color: #000;
+	border-bottom: 3px solid #000;
+}
+
+#menu a:hover {
+	color: #f60;
+	border-color: #f60;
+}
+
+#menu a.visited {
+	color: #f60;
+	border-color: #f60;
+}
+
+#menu a:focus {
+	outline: none;
+}
+
+.menu-icon {
+	cursor: pointer;
+}
+
+.menu-icon .menu-text {
+	font-size: 18px;
+	vertical-align: middle;
+}
+
+.menu-icon .fa {
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+.out-area {
+	position: relative;
+}
+
+#visual {
+	position: relative;
+}
+
+.topage-visual {
+	height: 480px;
+	position: relative;
+}
+
+.topage-title {
+	text-align: center;
+	color: #fff;
+	font-size: 40px;
+	position: absolute;
+	top: 50%;
+	z-index: 1010;
+	width: 100%;
+	transform: translateY(-50%);
+}
+
+div[class^='slide'] {
+	width: 100%;
+	height: 480px;
+	background-size: cover;
+	position: absolute;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.slide1 {
+	background-image: url(inc/img/top/slide_1.jpg);
+}
+
+.slide2 {
+	background-image: url(inc/img/top/slide_2.jpg);
+}
+
+.slide3 {
+	background-image: url(inc/img/top/slide_3.jpg);
+}
+
+.fadeOut {
+	animation: fadeOut 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.arrow-area {
+	position: absolute;
+	z-index: 100000;
+	color: #fff;
+	width: 100%;
+	height: 480px;
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	pointer-events: none;
+}
+
+.arrow-area button {
+	width: 60px;
+	height: 60px;
+	height: 60px;
+	border-radius: 2px;
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	line-height: 60px;
+	border: none;
+	pointer-events: auto;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+
+.arrow-area button:hover {
+	background: #e74c3c;
+}
+
+.arrow-area button:focus {
+	outline: none;
+}
+
+.arrow-area .fa {
+	font-size: 25px;
+	color: #fff;
+}
+
+.arrow-area .fa-chevron-left {
+	padding-top: 3px;
+	padding-right: 4px;
+}
+
+.arrow-area .fa-chevron-right {
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+.orange-text {
+	color: #f60;
+}
+
+.large-text {
+	font-size: 20px;
+}
+
+.right-text {
+	text-align: right;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.column-area {
+	display: flex;
+}
+
+.column-area.flex-aligncenter {
+	align-items: center;
+}
+
+.column-item {
+	flex: 1;
+}
+
+.column-item[data-basis] {
+	flex: 0;
+}
+
+.column-item+.column-item {
+	margin-left: 50px;
+}
+
+.button-area {
+	margin: 40px 0;
+}
+
+.white-button, .post-edit-link {
+	border: 1px solid #f60;
+	color: #f60;
+	padding: 10px 25px;
+	border-radius: 5px;
+	background: #fff;
+	font-size: 17px;
+}
+
+.orange-button {
+	border: 1px solid #f60;
+	color: #fff;
+	background: #f60;
+	padding: 10px 25px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.long-button {
+	min-width: 300px;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+iframe {
+	margin: 0 auto;
+}
+
+section {
+	padding: 60px 0;
+}
+
+.section-orange {
+	background: #f60;
+	color: #fff;
+}
+
+.section-black {
+	background: #000;
+	color: #fff;
+}
+
+.pad_lt20 {
+	padding-left: 20px;
+}
+
+.news-item {
+	display: flex;
+	align-items: center;
+	margin: 15px 0;
+}
+
+.news-item * {
+	margin-right: 30px;
+}
+
+.news-item .news-type {
+	background: #f60;
+	color: #fff;
+	padding: 3px 8px;
+	width: 75px;
+	text-align: center;
+}
+
+.news-item .news-link {
+	color: #000;
+	margin-right: 0;
+}
+
+.news-item .news-link:hover {
+	text-decoration: underline;
+}
+
+#footer {
+	background: #000;
+	color: #fff;
+	padding: 30px 0;
+	margin-top: 80px;
+}
+
+#footer .footer-content {
+	display: flex;
+	align-items: center;
+}
+
+#footer .footer-address {
+	flex: 10;
+	margin-left: 40px;
+}
+
+#footer .social-button {
+	color: #f60;
+	background: #d4d4d4;
+	border: 1px solid #f60;
+	border-radius: 50%;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	margin: 0 10px;
+}
+
+#footer .social-button .fa {
+	line-height: 40px;
+	font-size: 20px;
+}
+
+#footer .footer-copyright {
+	font-size: 10px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.main-title {
+	font-size: 20px;
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
+
+.main-title:after {
+	content: '';
+	background: #f60;
+	width: 150px;
+	height: 4px;
+	display: block;
+	margin-top: 20px;
+}
+
+.sub-title {
+	border-left: 5px solid #f60;
+	padding-left: 20px;
+}
+
+.sub-title + .wp-block-table table td {
+	vertical-align: top;
+}
+
+.sub-title + .wp-block-table table td:nth-child(1) {
+	width: 	20%;
+}
+
+.orange-line {
+	width: 150px;
+	border: 2px solid #f60;
+	margin: 60px auto;
+}
+
+.contact-form {
+	margin: 0 auto;
+	width: 700px;
+}
+
+.contact-form > div {
+	margin: 12px 0;
+}
+
+.contact-form input:not([type=radio]):not([type=submit]),
+.contact-form textarea {
+	width: 625px;
+	padding: 12px 10px;
+	border-radius: 2px;
+	border: 1px solid #d1d1d1;
+	background: #FCFCFC;
+	margin: 10px 0;
+	transition-duration: 0.3s;
+	font-family: inherit;
+}
+
+.contact-form input:disabled:not([type=radio]):not([type=submit]),
+.contact-form textarea:disabled {
+	background: #f2f2f2;
+	color: #9D9D9D;
+}
+
+.contact-form input:not([type=radio]):not([type=submit]):focus,
+.contact-form textarea:focus {
+	outline: none;
+	border-color: #f60;
+}
+
+.badge {
+	background: #ff5d55;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 12px;
+	padding: 3px 8px;
+}
+
+.radio {
+	cursor: pointer;
+	margin: 10px 15px 10px 0;
+	display: inline-block;
+}
+
+.radio input {
+	display: none;
+}
+
+.radio span {
+	vertical-align: middle;
+	user-select: none;
+}
+
+.radio .widget {
+	margin-right: 8px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #cecece;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 100%;
+	background: radial-gradient(#cecece 20%, #fff 25%);
+	cursor: pointer;
+}
+
+.radio input:checked+.widget {
+	background: radial-gradient(#f60 45%, #fff 50%);
+	border-color: #f60;
+}
+
+.radio input:checked~span {
+	color: #f60;
+}
+
+.radio input:checked:disabled~span {
+	color: #888;
+}
+
+.radio input:disabled+.widget {
+	border-color: #ddd;
+	background: radial-gradient(#ddd 20%, #fff 25%);
+}
+
+.radio input:checked:disabled+.widget {
+	border-color: #ddd;
+	background: radial-gradient(#b7b7b7 44%, transparent 50%);
+}
+
+input[type="submit"] {
+	margin: 0 10px;
+}
