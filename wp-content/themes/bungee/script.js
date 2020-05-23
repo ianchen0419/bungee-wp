@@ -1,4 +1,5 @@
-var nowPath=location.pathname.split('/')[2];
+// var nowPath=location.pathname.split('/')[2];
+var nowPath=location.pathname.split('/')[1];
 
 // menu highlight
 if(!nowPath==''){
@@ -90,4 +91,15 @@ function goMail(th, e){
 	}
 
 	th.submit();
+}
+
+// mail check
+function checkEmail(th){
+	var firstEmail=document.querySelector('input[name="your-mail"]');
+	if(th.value==firstEmail.value){
+		th.setCustomValidity("");
+	}else{
+		
+		th.setCustomValidity("メールアドレス（確認用）の内容に誤りがあります");
+	}
 }

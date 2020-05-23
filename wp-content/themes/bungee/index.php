@@ -47,7 +47,7 @@
 						<div class="spacer" style="height: 20px"></div>
 						<img src="<?php bloginfo('template_directory') ?>/inc/img/top/training.png" alt="TEACHER TRAINING" width="300" />
 						<div class="button-area">
-							<a class="white-button" href="<?php bloginfo('url'); ?>/about-bungee-super-fly-workout">Read more</a>
+							<a class="white-button" href="<?php bloginfo('url'); ?>/bungee-teacher-training">Read more</a>
 						</div>
 					</figure>
 				</div>
@@ -59,7 +59,7 @@
 						<div class="spacer" style="height: 20px"></div>
 						<img src="<?php bloginfo('template_directory') ?>/inc/img/top/equipment.png" alt="EQUIPMENT" width="300" />
 						<div class="button-area">
-							<a class="white-button" href="<?php bloginfo('url'); ?>/about-bungee-super-fly-workout">Read more</a>
+							<a class="white-button" href="<?php bloginfo('url'); ?>/bungee-equipment">Read more</a>
 						</div>
 					</figure>
 				</div>

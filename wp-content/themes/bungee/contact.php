@@ -35,14 +35,14 @@
 					<strong>メールアドレス</strong>
 					<span class="badge">必須</span>
 				</div>
-				<input type="email" required name="your-mail" />
+				<input type="email" required name="your-mail" oninput="confirmMail.disabled=false" />
 			</div>
 			<div>
 				<div>
 					<strong>メールアドレス（確認用）</strong>
 					<span class="badge">必須</span>
 				</div>
-				<input type="email" required name="your-mail2" />
+				<input type="email" required name="your-mail2" id="confirmMail" onblur="checkEmail(this)" oninput="checkEmail(this)" disabled />
 			</div>
 			<div>
 				<div>

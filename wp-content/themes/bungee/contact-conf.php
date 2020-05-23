@@ -98,7 +98,7 @@
 			</div>
 
 			<div class="button-area center-text">
-				<a class="white-button long-button" href="history.back();">戻る</a>
+				<a class="white-button long-button" onclick="history.back();">戻る</a>
 				<input type="submit" value="送信" class="orange-button long-button" />
 			</div>
 		</form>
