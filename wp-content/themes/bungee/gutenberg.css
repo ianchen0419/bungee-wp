@@ -24,6 +24,10 @@
 	color: #f60;
 }
 
+.gutenberg .post-edit-link {
+	display: inline-block;
+}
+
 .gutenberg .has-huge-font-size {
 	font-size: 48px;
 }
@@ -60,6 +64,20 @@
 
 .gutenberg .aligncenter figcaption {
 	text-align: center;
+}
+
+/*align*/
+.alignright {
+	float: right;
+}
+
+/*ボタン*/
+.wp-block-button .wp-block-button__link {
+	padding: 10px 20px;
+	min-width: 100px;
+	display: block;
+	text-align: center;
+	margin: 10px 0;
 }
 
 
