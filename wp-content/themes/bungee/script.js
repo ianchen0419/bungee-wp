@@ -9,7 +9,6 @@ if(!nowPath==''){
 }
 
 //slider show
-
 const slides=document.querySelectorAll("div[class^='slide']");
 let myIdx=9999;
 
@@ -65,7 +64,9 @@ function autoShow(){
 var scrollbarWidth=window.innerWidth-document.body.clientWidth;
 
 function openMenu(){
-	document.body.style.paddingRight=scrollbarWidth+'px';
+	if(navigator.userAgent.match('Windows')!=false){
+		document.body.style.paddingRight=scrollbarWidth+'px';
+	}
 	document.body.classList.add('menu-showed');
 }
 
@@ -95,8 +96,8 @@ function goMail(th, e){
 
 // mail check
 function checkEmail(th){
-	var firstEmail=document.querySelector('input[name="your-mail"]');
-	if(th.value==firstEmail.value){
+	var mail1=document.querySelector('input[name="your-mail"]');
+	if(th.value==mail1.value){
 		th.setCustomValidity("");
 	}else{
 		

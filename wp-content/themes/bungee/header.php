@@ -14,6 +14,8 @@
 	<link rel="stylesheet prefetch" href="<?php bloginfo('template_directory') ?>/gutenberg.css" />
 	<link rel="stylesheet prefetch" href="<?php bloginfo('template_directory') ?>/style.css" />
 	<link rel="stylesheet" media="screen and (max-width: 768px)" href="<?php bloginfo('template_directory') ?>/mobile.css" />
+	<link rel='stylesheet' id='admin-bar-css'  href='<?php bloginfo('home') ?>/wp-includes/css/admin-bar.min.css?ver=5.5.3' type='text/css' media='all' />
+	<link rel='stylesheet' id='admin-bar-css'  href='<?php bloginfo('home') ?>/wp-includes/css/dashicons.min.css?ver=5.5.3' type='text/css' media='all' />
 </head>
 
 <?php 
@@ -26,6 +28,12 @@
 ?>
 		<body onclick="closeMenu(this, event)">
 <?php
+	}
+?>
+
+<?php 
+	if(is_admin()){
+		wp_body_open();
 	}
 ?>
 	<header id="header">
@@ -55,5 +63,6 @@
 			<a href="<?php bloginfo('url'); ?>/bungee-equipment" class="menu-item">equipment</a>
 			<a href="<?php bloginfo('url'); ?>/locations" class="menu-item">locations</a>
 			<a href="<?php bloginfo('url'); ?>/contact" class="menu-item">contact</a>
+			<a href="<?php bloginfo('url'); ?>/member" class="menu-item">for members<br>（会員限定ページ）</a>
 		</div>
 	</nav>
