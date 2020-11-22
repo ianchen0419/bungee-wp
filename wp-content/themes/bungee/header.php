@@ -63,6 +63,6 @@
 			<a href="<?php bloginfo('url'); ?>/bungee-equipment" class="menu-item">equipment</a>
 			<a href="<?php bloginfo('url'); ?>/locations" class="menu-item">locations</a>
 			<a href="<?php bloginfo('url'); ?>/contact" class="menu-item">contact</a>
-			<a href="<?php bloginfo('url'); ?>/member" class="menu-item">for members<br>（会員限定ページ）</a>
+			<a href="<?php bloginfo('url'); ?>/member" class="menu-item">For Members<br>（会員限定ページ）</a>
 		</div>
 	</nav>
